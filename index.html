@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇩🇪 DeutschPower | Nemis tili</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- HEADER -->
+        <header>
+            <div class="brand">
+                <span class="flag">🇩🇪</span>
+                <div>
+                    <h1>DeutschPower</h1>
+                    <p>Nemis tili platformasi</p>
+                </div>
+            </div>
+            <div class="user-stats">
+                <div class="stat-badge streak">🔥 <span id="streak-count">1</span> Kun</div>
+                <div class="stat-badge xp">⭐ <span id="xp-count">250</span> XP</div>
+            </div>
+        </header>
+
+        <!-- DARAJA SELEKTORI -->
+        <div class="level-selector">
+            <button class="level-btn active" onclick="selectLevel('A1')">A1</button>
+            <button class="level-btn" onclick="selectLevel('A2')">A2</button>
+            <button class="level-btn" onclick="selectLevel('B1')">B1</button>
+            <button class="level-btn" onclick="selectLevel('B2')">B2</button>
+            <button class="level-btn" onclick="selectLevel('C1')">C1</button>
+            <button class="level-btn" onclick="selectLevel('C2')">C2</button>
+        </div>
+
+        <!-- HERO CARD -->
+        <section class="hero-card">
+            <h2>Keling, Nemis tilini zabt etamiz! 🚀</h2>
+            <p>Interaktiv lug'atlar, mukammal grammatika, AI mashqlar va testlar to'plami.</p>
+        </section>
+
+        <!-- MODULLAR GRID -->
+        <main class="modules-grid">
+            <div class="module-card" onclick="openSection('flashcards')">
+                <div class="icon-wrap bg-blue">🎴</div>
+                <div class="info">
+                    <h3>Flashcards</h3>
+                    <p>600+ Muhim so'zlar & Artikl mashqi</p>
+                </div>
+            </div>
+
+            <div class="module-card" onclick="openSection('grammar')">
+                <div class="icon-wrap bg-purple">📖</div>
+                <div class="info">
+                    <h3>Grammatika</h3>
+                    <p>A1-C2 Darajalar bo'yicha qoidalar</p>
+                </div>
+            </div>
+
+            <div class="module-card" onclick="openSection('quiz')">
+                <div class="icon-wrap bg-green">🧠</div>
+                <div class="info">
+                    <h3>Smart Quiz</h3>
+                    <p>Duolingo uslubidagi interaktiv testlar</p>
+                </div>
+            </div>
+
+            <div class="module-card" onclick="openSection('dialogues')">
+                <div class="icon-wrap bg-orange">💬</div>
+                <div class="info">
+                    <h3>Kunlik Dialoglar</h3>
+                    <p>Hayotiy nemischa so'zlashuvlar</p>
+                </div>
+            </div>
+
+            <div class="module-card" onclick="openSection('verbs')">
+                <div class="icon-wrap bg-pink">⚡</div>
+                <div class="info">
+                    <h3>Noto'g'ri Fe'llar</h3>
+                    <p>Starke Verben jadvali & Pronunciation</p>
+                </div>
+            </div>
+
+            <div class="module-card" onclick="openSection('leaderboard')">
+                <div class="icon-wrap bg-gold">🏆</div>
+                <div class="info">
+                    <h3>Top O'quvchilar</h3>
+                    <p>Haftalik reyting va o'rinlar</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Dynamic Content Display (Section Viewer) -->
+        <div id="content-modal" class="modal hidden">
+            <div class="modal-body">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <div id="modal-inner"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
